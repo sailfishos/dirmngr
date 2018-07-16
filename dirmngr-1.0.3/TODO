@@ -1,0 +1,37 @@
+things we might want to do                              -*- outline -*-
+
+* Map LDAP error codes
+
+* Optimize lookup
+** Use the most likely server first.
+   This is the server where a baseDN has been given and that baseDN is
+   contained in the search pattern.
+
+* name subordination (nameRelativeToCRLIssuer) 
+  is not yet supported by Dirmngr.
+
+* CRL DP URI
+  The CRL DP shall use an URI for LDAP without a host name.  The host
+  name shall be looked by using the DN in the URI.  We don't implement
+  this yet.  Solution is to have a mapping DN->host in our ldapservers
+  configuration file.
+
+* Support certs-only CMS messages
+  Some sites store their certificates under userSMIMECertificate.  To
+  handle them we need to parse a CMS message and break of all
+  certificates. Requested by Neil Dunbar.  I have added some code
+  fragments to ldap.c but it needs to be finished.
+
+* Test OCSP responder redirection.
+  We need to figure out an OCSP responder actually using redirection.
+
+* Restrict valid root certificates
+  For some purposes (e.g. Poldi) it might make sense to allow the
+  caller to restrict what root certificates are to be used for the
+  chain validation.
+
+* Windows port (unknown if these bugs also occur in GNU/Linux):
+  We are leaking some events under load, probably a bug in w32-pth.
+  When hashing debugging is enabled, we leak file handles for the
+  dbgmd crl files.  May be a bug in gcrypt.
+

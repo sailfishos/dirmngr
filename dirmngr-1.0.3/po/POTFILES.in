@@ -1,0 +1,19 @@
+# List of files with translatable strings.
+
+jnlib/argparse.c
+jnlib/logging.c
+src/certcache.c
+src/crlcache.c
+src/crlfetch.c
+src/dirmngr.c
+src/http.c
+src/ldap.c
+src/misc.c
+src/ocsp.c
+src/server.c
+src/validate.c
+src/dirmngr-client.c
+src/no-libgcrypt.c
+src/dirmngr_ldap.c
+
+

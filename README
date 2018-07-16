@@ -1,0 +1,6 @@
+dirmngr is part of GnuPG project. It used to live in a separated tree from GnuPG itself.
+The last GPLv2 release is 1.0.3 from the separate tree. Version control of separated
+tree is not available anymore. Tarball was downloaded from ftp://ftp.gnupg.org/gcrypt/dirmngr
+
+The tarball was signed with a key that is not available anymore. Current signing keys
+of the GnuPG project are listed in https://www.gnupg.org/signature_key.html

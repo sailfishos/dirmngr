@@ -1,0 +1,56 @@
+
+                  DirMngr - X.509 Directory Manager
+                -------------------------------------
+                         Version 1.0.3
+
+
+    Intro
+    -----
+
+    DirMngr is a server for managing and downloading certificate
+    revocation lists (CRLs) for X.509 certificates and for downloading
+    the certificates themselves. Dirmngr also handles OCSP requests as
+    an alternative to CRLs. Dirmngr is either invoked internaly by
+    gpgsm (from gnupg 1.9) or when running as a system daemon through
+    the dirmngr-client tool.
+
+    See the file COPYING for copyright and warranty information. See
+    the file AUTHORS for contact addresses and code history.
+
+    On W32 targets, the URL extension of OpenLDAP is included which is
+    provided in src/ldap-url.c.  This file has a different copyright
+    from the rest of the package.  Please see that file for more
+    details.
+
+
+    Installation
+    ------------
+    Please read the file INSTALL. Here is a quick summary:
+
+    1) Unpack the tarball.  With GNU tar you can do it this way:
+       "tar xjvf dirmngr-x.y.z.tar.bz2"
+
+    2) "cd dirmngr-x.y.z"
+
+    3) "./configure --sysconfdir=/etc --localstatedir=/var"
+       The two options make sure that the configuration data will
+       not be search under /usr/local/etc and that variable data will
+       be stored at a standard place too.
+
+    4) "make"
+
+    5) "make install"  (you probably need to become root first)
+
+    6) You end up with a a dirmngr and dirmngr-client binary in
+       /usr/local/bin.  Some other files are also installed for
+       internal use.
+
+    If you are using dirmngr as part of gnupg 2.0 you are done now.
+    If you want to install it as a system daemon, please see the
+    manual by running the command "info dirmngr"
+
+
+   
+ 
+
+

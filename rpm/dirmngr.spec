@@ -8,7 +8,6 @@ URL:        ftp://ftp.gnupg.org/gcrypt/dirmngr
 Source0:    %{name}-%{version}.tar.bz2
 BuildRequires:  pkgconfig(libgcrypt)
 BuildRequires:  gettext
-BuildRequires:  automake
 BuildRequires:  libassuan-devel >= 1.0.4
 BuildRequires:  libgpg-error-devel
 BuildRequires:  libksba-devel
@@ -19,11 +18,12 @@ BuildRequires:  openldap-devel
 A module that handles the Certificate Revocation Lists (CRLs)
 
 %prep
-%setup -q -n %{name}-%{version}/%{name}
+%setup -q -n %{name}-%{version}/%{name}-1.0.3
 
 %build
 %configure --disable-static --disable-doc
 make %{?_smp_mflags}
+cd -
 
 %install
 rm -rf %{buildroot}
