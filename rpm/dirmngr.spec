@@ -12,7 +12,6 @@ BuildRequires:  libassuan-devel >= 1.0.4
 BuildRequires:  libgpg-error-devel
 BuildRequires:  libksba-devel
 BuildRequires:  pth-devel
-BuildRequires:  openldap-devel
 
 %description
 A module that handles the Certificate Revocation Lists (CRLs)
@@ -38,5 +37,4 @@ rm -rf %{buildroot}%{_datadir}/man
 %defattr(-,root,root,-)
 %doc COPYING
 %{_bindir}/*
-%{_libexecdir}/*
 

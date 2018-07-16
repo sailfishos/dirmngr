@@ -4,3 +4,8 @@ tree is not available anymore. Tarball was downloaded from ftp://ftp.gnupg.org/g
 
 The tarball was signed with a key that is not available anymore. Current signing keys
 of the GnuPG project are listed in https://www.gnupg.org/signature_key.html
+
+The dirmngr_ldap executable was disabled by a commit, modifying the configure not to fail
+on ldap detection, and also src/Makefile.in not to build and install dirmngr_ldap.
+Currently this executable is not required for Mer purposes and avoid to add a dependency
+on openldap.

@@ -76,7 +76,7 @@ CONFIG_CLEAN_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(libexecdir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 libexecPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
-PROGRAMS = $(bin_PROGRAMS) $(libexec_PROGRAMS)
+PROGRAMS = $(bin_PROGRAMS)
 am_dirmngr_OBJECTS = dirmngr.$(OBJEXT) server.$(OBJEXT) \
 	crlcache.$(OBJEXT) crlfetch.$(OBJEXT) ldapserver.$(OBJEXT) \
 	certcache.$(OBJEXT) b64dec.$(OBJEXT) cdblib.$(OBJEXT) \
@@ -592,7 +592,7 @@ install-data-am:
 
 install-dvi: install-dvi-am
 
-install-exec-am: install-binPROGRAMS install-libexecPROGRAMS
+install-exec-am: install-binPROGRAMS
 
 install-html: install-html-am
 
