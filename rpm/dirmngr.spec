@@ -2,7 +2,6 @@ Name:       dirmngr
 Summary:    GnuPG utility to manage certificates
 Version:    1.0.3
 Release:    1
-Group:      Applications/System
 License:    GPLv2
 URL:        ftp://ftp.gnupg.org/gcrypt/dirmngr
 Source0:    %{name}-%{version}.tar.bz2
@@ -22,7 +21,6 @@ A module that handles the Certificate Revocation Lists (CRLs)
 %build
 %configure --disable-static --disable-doc
 make %{?_smp_mflags}
-cd -
 
 %install
 rm -rf %{buildroot}
@@ -35,6 +33,5 @@ rm -rf %{buildroot}%{_datadir}/man
 
 %files -f dirmngr.lang
 %defattr(-,root,root,-)
-%doc COPYING
+%license COPYING
 %{_bindir}/*
-
